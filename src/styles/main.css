@@ -21,6 +21,7 @@ h3 {
     border-style: outset;
     border-color: rgb(150, 197, 197);
     border-radius: 1.2rem;
+    background-color: lightgrey;
 }
 
 .corporation {
@@ -31,33 +32,39 @@ h3 {
     border-style: outset;
     border-color: rgb(150, 197, 197);
     border-radius: 1.2rem;
+    background-color: lightgrey;
 }
 
 .corporationDonation {
     display: inline-block;
     width: 250px;
+    height: 300px;
     margin: 10px;
     padding: 5px;
     border: 2px dashed dodgerblue;
-    border-style: double;
-    align-items: baseline;
-    height: 270px;
+    box-sizing: border-box;
 }
 
 .pacDonation {
     display: inline-block;
     width: 250px;
+    height: 250px;
     margin: 10px;
     padding: 5px;
-    border: 2px dashed dodgerblue;
-    border-style: double;
-    align-items: baseline;
-    height: 250px;
+    border: 2px dodgerblue;
+    border-style: dashed;
+    box-sizing:border-box;
+}
+
+.politicians--allInfo {
+    display: grid;
+    grid: auto / 40vw 40vw;
+    gap: 50px;
 }
 
 .politician--allInfo {
     border: 1px solid;
-    width: 50vw;
-    margin: 5px 0 5px 0;
     padding: 5px;
+    box-shadow: 5px 10px lightseagreen;
+    background-color: lightgoldenrodyellow;
 }
