@@ -16,12 +16,12 @@ export const CorporationDonations = () => {
         return corporations.find(corporation => corporation.id === corporationId)
     }
 
-    let html = '<article class="pacs">'
+    let html = '<article class="corporationDonations">'
 
     for (const pac of pacs) {
         const foundCorporationDonationObjects = findCorporationDonationObjects(pac.id)
         html += `
-        <section class="pac">
+        <section class="corporationDonation">
             <header class="pac__name">
                 <h2>${pac.registeredName}</h2>
             </header>
@@ -29,16 +29,17 @@ export const CorporationDonations = () => {
                 <div>${pac.address}</div>
             </div>
             <div class="pac__donors">
-                <h3>Donors</h3>
+                <h3>Donors:</h3>
                 <ul>
-                ${foundCorporationDonationObjects.map(obj => {
-                    const foundCorporation = findCorporationObject(obj.corporationId)
-                    
-                    return `
-                        <li>${foundCorporation.company} (${obj.amount})</li>
-                    `
-                    }).join("")
-                }
+                    ${
+                    foundCorporationDonationObjects.map(obj => {
+                        const foundCorporation = findCorporationObject(obj.corporationId)
+                        
+                        return `
+                            <li>${foundCorporation.company} (${obj.amount})</li>
+                        `
+                        }).join("")
+                    }
                 </ul>
             </div>
         </section>
